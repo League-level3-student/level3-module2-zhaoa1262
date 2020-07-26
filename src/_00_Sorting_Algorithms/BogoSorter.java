@@ -22,32 +22,30 @@ public class BogoSorter extends Sorter {
 	void sort(int[] array, SortingVisualizer display) {
 		int integer = array[0];
 		int count = 0;
-		boolean inOrder;
-		boolean done = false;
+		int inOrder = 0; 
 		
 		while(true) {
+			display.updateDisplay();
 		for (int i = 1; i < array.length; i++) {
 			if (integer <= array[i]) {
 				integer = array[i];
-				count++;
-			} 
+				count++; 
+			}  
 		}
-		if (count == array.length-1) {
-			inOrder = true;
-		} else {
-			inOrder = false;
-		}
+		if (count == array.length-1) { 
+			inOrder++;
+		} 
 		
-		if(inOrder == false) {
+		if(inOrder != array.length) { 
 			Random rand = new Random();
-			int firstRandom = rand.nextInt();
-			int secondRandom = rand.nextInt();
+			int firstRandom = rand.nextInt(array.length);
+			int secondRandom = rand.nextInt(array.length);
 			int joe = array[firstRandom];
 			array[firstRandom] = array[secondRandom];
 			array[secondRandom] = joe;
 			 
 		}
-		else if(inOrder == true) {
+		else if(inOrder == array.length) { 
 			break;
 		}
 	}
