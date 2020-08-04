@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class _04_SearchTest {
-
+	
 	// A MINIMUM OF 3 TESTS ARE REQUIRED FOR EACH METHOD
 	
 	@Test
