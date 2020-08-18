@@ -76,8 +76,10 @@ public class MergeSorter extends Sorter {
                 array[k] = temp[i];
                 k+=1;
                 i+=1;
+                display.updateDisplay();
                 //19. increase k and i by 1
             }
+            
 		} 
 	}
 
