@@ -54,14 +54,41 @@ public class Algorithms {
 		return false;
 	}
 	
-	public static double sortScores(List<Double> results) {
+	public static List<Double> sortScores(List<Double> results) {
 		for(int i = 0; i<results.size(); i++) {
 			for(int j = i+1; j<results.size(); j++) {
 				if(results.get(i) > results.get(j)) {
-					
+					Collections.swap(results, i, j);
 				}
 			}
 		}
+		return results;
 		
+	}
+	
+	public static List<String> sortDNA(List<String> dna) {
+		for(int i = 0; i<dna.size(); i++) {
+			for(int j = i+1; j<dna.size(); j++) {
+				if(dna.get(i).length()>dna.get(j).length()) {
+					Collections.swap(dna, i, j);
+				}
+				
+			}
+			
+		}
+		return dna;
+		
+	}
+	
+	public static List<String> sortWords(List <String> words) {
+		for(int i = 0; i<words.size(); i++) {
+			for(int j = i+1; j<words.size(); j++) {
+				if(words.get(i).compareTo(words.get(j))>0) {
+					Collections.swap(words, i, j);
+				}
+			}
+			
+		}
+		return words;
 	}
 }
