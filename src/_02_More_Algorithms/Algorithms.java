@@ -84,7 +84,7 @@ public class Algorithms {
 		for(int i = 0; i<words.size(); i++) {
 			for(int j = i+1; j<words.size(); j++) {
 				if(words.get(i).compareTo(words.get(j))>0) {
-					Collections.swap(words, i, j);
+					Collections.swap(words, i, j); 
 				}
 			}
 			
